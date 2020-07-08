@@ -1,0 +1,58 @@
+"""
+Longest Substring Without Repeating Characters
+
+Given a string, find the length of the longest substring without repeating characters.
+
+Here is an example solution in Python language. (Any language is OK to use in an interview, though we'd recommend Python as a generalist language utilized by companies like Google, Facebook, Netflix, Dropbox, Pinterest, Uber, etc.,)
+
+
+
+
+class Solution:
+    def lengthOfLongestSubstring(self, s):
+
+
+# Fill this in.
+
+print
+Solution().lengthOfLongestSubstring('abrkaabcdefghijjxxx')
+# 10
+
+Can you find a solution in linear time?
+=====================================================================================================================
+"""
+# SOLUTION
+"""
+This can be solved by cleverly manipulating two pointers - the head and tail. These two define a sliding window. 
+We also have a hashmap to keep track of the latest index of any letter.
+
+The algorithm moves the head through the array, while updating the hashmap of positions of characters. When we find a 
+duplicate, we calculate the length between the head and the last duplicate character... and if that length is greater, 
+to save that length. That is the result value.
+
+The algorithm runs in linear time in a single pass O(n) and uses linear space as well for the hashmap.
+"""
+
+
+class Solution:
+    def lengthOfLongestSubstring(self, s):
+        # create dictionary of letters and their latest index
+        letters = {}
+        # create a tail pointer, it updates whenever we meet a duplicate character
+        tail = -1
+        # create a head pointer, this one just iterates through every letter
+        head = 0
+        # result variable, updates whenever it's higher than result
+        result = 0
+
+        while head < len(s):
+            if s[head] in letters:
+                tail = max(tail, letters[s[head]])
+            letters[s[head]] = head
+            result = max(result, head - tail)
+            head += 1
+        return result
+
+
+print (Solution().lengthOfLongestSubstring('abrkaabcdefghijjxxx'))
+# 10
