@@ -51,3 +51,11 @@ Output: [1,2]
 
 Input: A = [1,2,3,4,5,6,10], target = 9
 Output: [-1, -1]      
+
+
+=========================================================
+6. Given a list of numbers, where every number shows up twice except for one number, find that one number.
+
+Example:
+Input: [4, 3, 2, 4, 1, 3, 2]
+Output: 1
