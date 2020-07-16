@@ -60,7 +60,7 @@ Example:
 Input: [4, 3, 2, 4, 1, 3, 2]
 Output: 1
 
-<br><b>=======================================================================</b></br>
+<br><b>=======================================================================</b><br>
 <b>7. You are given an array of integers in an arbitrary order. Return whether or not it is possible to make the array non-decreasing by modifying at most 1 element to any value.</b>
 <br><b>Description:</b> We define an array is non-decreasing if array[i] <= array[i + 1] holds for every i (1 <= i < n).<br>
       Example:
@@ -69,6 +69,6 @@ Output: 1
 <br><b>=========================================================</b>     
 
 
-<br><b>=======================================================================</b></br>
+<br><b>=======================================================================</b><br>
 <b>8. Finding the Floor and Ceiling in Binary Search Tree</b>
 <br><b>Description:</b> Given an integer k and a binary search tree, find the floor (less than or equal to) of k, and the ceiling (larger than or equal to) of k. If either does not exist,then print them as None.<br>
