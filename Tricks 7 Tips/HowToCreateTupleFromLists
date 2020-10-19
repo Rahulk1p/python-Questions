@@ -10,3 +10,21 @@ states = ['MI','MI','PA']
 cityTuple = zip(city,population,states)
 print(cityTuple)
 print(tuple(cityTuple))
+
+class City:
+    def __init__(self,n,p,s):
+        self.name=n
+        self.population=p
+        self.state=s
+
+    def __str__(self):
+        return '{}, {}, (pop:{})'.format(self.name, self.state,self.population)
+
+ct = []
+cityTuple = zip(city,population,states)
+for ctup in cityTuple:
+     name, pop, st = ctup
+     city = City(name,pop,st)
+     ct.append(city)
+     print(ct)
+     print(city)
