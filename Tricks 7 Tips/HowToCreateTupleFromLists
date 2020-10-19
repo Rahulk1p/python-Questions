@@ -1,5 +1,5 @@
 """
-This code explains how to create Tuples from Lists.
+This code explains how to create list of Tuples from Lists.
 Suppose we have two or many list of same size and want to a convert those list into Tuple.
 If any list is not have same size then it will not create tuple for that and not include that data into tuple for that position across lists.
 """
